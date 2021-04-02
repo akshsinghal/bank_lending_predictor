@@ -158,8 +158,8 @@
                 </div>
 
 								<div class="form-group">
-									<input name="term" list="terms" class="form-control-input" type="number" min="36" max="60" id="Loan Term" required>
-									<label class="label-control" for="Loan Term">Loan Term (in Months):</label>
+									<input name="term" list="terms" class="form-control-input" type="number"  id="Loan Term" required>
+									<label class="label-control" for="Loan Term">Loan Term:</label>
 									<div class="help-block with-errors"></div>
 								</div>
                 <div class="form-group">
@@ -171,14 +171,14 @@
     	<option value="Fixed_rate">Fixed_rate</option>
     	<option value="Government_insured">Government_insured</option>
     	<option value="Jumbo">Jumbo</option>
+    </select>
                   </datalist>
                   <div class="help-block with-errors"></div>
                 </div>
-
-
                     </div> <!-- end of contact form -->
                 </div> 	<!-- end of text-container -->
-				                <div class="col-lg-6">
+
+                        <div class="col-lg-6">
                     <div class="text-container">
 							<!-- Contact Form -->
               <div class="form-group">
@@ -289,24 +289,21 @@
 								</div>
 
 
-
-                    </div> <!-- end of contact form -->
-					</div> 	<!-- end of text-container -->
-                    <button type="submit" class="form-control-submit-button">MAKE PREDICTION</button>
-					</form>
-					</div> <!-- end of container -->
-				<div class="result" align="center">
-          {% if result %}
-          {% for variable, value in original_input.items() %}
-          <br><b>{{ variable }}</b> : {{ value }}
-          {% endfor %}
-          <br>
-          <br> Loan Decision:
-          <p style="font-size:20px">{{ result }}</p>
-          {% endif %}
-				</div>
-		</div>
-    </div> <!-- end of ex-basic -->
+              </div> <!-- end of contact form -->
+            </div> 	<!-- end of text-container -->
+              <button type="submit" class="form-control-submit-button">MAKE PREDICTION</button>
+            </form>
+            !-- end of container -->
+            <div class="result" align="center">
+          
+            {% if result %}
+            <br> Loan Decision:
+            <p style="font-size:20px">{{ result }}</p>
+            {% endif %}
+            </div>
+            </div>
+            </div>
+            </div> <!-- end
     <!-- end of terms content -->
  	  <!-- Details 2 -->
 	<div id="Insights" class="tabs">
