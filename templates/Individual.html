@@ -38,7 +38,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.svg')}}" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="/"><img src="../static/images/logo.svg" alt="alternative"></a>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.svg')}}"		alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="/"><img src="../static/images/logo.svg"		alt="alternative"></a>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,9 +74,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#Insights">INSIGHTS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
                 </li>
             </ul>
 
@@ -117,7 +114,7 @@
 
     <!-- Terms Content -->
     <div id="Predict" class="ex-basic-2">
-		<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Please Fill in the details to get your chances of Loan Approval.</h4>
+		<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Please fill in the details to get your chances of Loan Approval.</h4>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -125,52 +122,28 @@
 							<!-- Contact Form -->
 								<form id="contactForm" data-toggle="validator" data-focus="false" action="{{ url_for('Individual') }}" method="POST">
                   <div class="form-group">
-                    <input name="code" type="text" class="form-control-input" id="code" required min="1" max="99">
-                    <label class="label-control" for="code">First Name:</label>
+                    <input name="Name" type="text" class="form-control-input" id="Name" required min="1" max="99">
+                    <label class="label-control" for="code">Name:</label>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
-                    <input name="code" type="number" class="form-control-input" id="code" required min="1" max="99">
-                    <label class="label-control" for="code"> Age:</label>
+                    <input name="Age" type="number" class="form-control-input" id="Age" required min="1" max="99">
+                    <label class="label-control" for="code">Age:</label>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
-                    <input name="code" type="number" class="form-control-input" id="code" required min="1" max="99">
+                    <input name="Phone Number" type="number" class="form-control-input" id="Phone Number" required min="1" max="99">
                     <label class="label-control" for="code">Phone Number:</label>
                     <div class="help-block with-errors"></div>
                   </div>
-                  <div class="form-group">
-                    <input name="home_ownership" list="IDS" class="form-control-input" required select>
-                    <label class="label-control" for="home_ownership">Type of ID</label>
-                    <datalist id="IDS">
-                    <option value="Aadhar">
-                    <option value="Passport">
-                    <option value="Driver License">
-                    <option value="Voter ID">
-                    <option value="Pan Card">
-                    <option value="Other">
-                    </datalist>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="form-group">
-                    <input name="home_ownership" list="98" class="form-control-input" required select>
-                    <label class="label-control" for="home_ownership">Marital Status</label>
-                    <datalist id="98">
-                    <option value="Single">
-                    <option value="Married">
-                    <option value="Divorced">
-                    <option value="Widowed">
-                    </datalist>
-                    <div class="help-block with-errors"></div>
-                  </div>
 								<div class="form-group">
-									<input name="er_credit_open_date" type="text" class="form-control-input" id="er_credit_open_date">
-									<label class="label-control" for="er_credit_open_date">Work Address</label>
+									<input name="er_credit_open_date" type="number" class="form-control-input" id="er_credit_open_date">
+									<label class="label-control" for="er_credit_open_date">Median Household Income:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
 									<input name="code" type="number" class="form-control-input" id="code" required min="1" max="99">
-									<label class="label-control" for="code">Bank Name:</label>
+									<label class="label-control" for="code">Median Home Value:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
@@ -186,16 +159,12 @@
 
 								<div class="form-group">
 									<input name="term" list="terms" class="form-control-input" type="number" min="36" max="60" id="term" required>
-									<label class="label-control" for="term">Term (in Months)</label>
-									<datalist id="terms">
-									<option value="36">
-									<option value="60">
-									</datalist>
+									<label class="label-control" for="term">Loan Term (in Months)</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
 									<input name="dti" class="form-control-input" type="number" min="0" id="dti" required>
-									<label class="label-control" for="dti">Latitude:</label>
+									<label class="label-control" for="dti">Median Home Value:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 
@@ -207,17 +176,7 @@
                     <div class="text-container">
 							<!-- Contact Form -->
               <div class="form-group">
-                <input name="code" type="text" class="form-control-input" id="code" required min="1" max="99">
-                <label class="label-control" for="code"> Last Name:</label>
-                <div class="help-block with-errors"></div>
-              </div>
-              <div class="form-group">
-                <input name="code" type="date" class="form-control-input" id="code" required min="1" max="99">
-                <label class="label-control" for="code"> Birth Date:</label>
-                <div class="help-block with-errors"></div>
-              </div>
-              <div class="form-group">
-                <input name="home_ownership" list="gender" class="form-control-input" required select>
+                <input name="Gender" list="gender" class="form-control-input" required select>
                 <label class="label-control" for="home_ownership">Gender</label>
                 <datalist id="gender">
                 <option value="Male">
@@ -227,22 +186,27 @@
                 </datalist>
                 <div class="help-block with-errors"></div>
               </div>
+              <div class="form-group">
+                <input name="Birth-Date" type="date" class="form-control-input" id="Birth-Date" required min="1" max="99">
+                <label class="label-control" for="code">Birth Date:</label>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group">
+                <input name="State" list="gender" class="form-control-input" required select>
+                <label class="label-control" for="home_ownership">State:</label>
+                <div class="help-block with-errors"></div>
+              </div>
 
                 <div class="form-group">
-									<input name="annual_inc" type="email"  class="form-control-input" id="annual_inc" required>
-									<label class="label-control" for="annual_inc"> Email ID:</label>
+									<input name="Email" type="email"  class="form-control-input" id="Email" required>
+									<label class="label-control" for="annual_inc">Email ID:</label>
 									<div class="help-block with-errors"></div>
 								</div>
                 <div class="form-group">
-                  <input name="annual_inc" type="text"  class="form-control-input" id="annual_inc" required>
-                  <label class="label-control" for="annual_inc"> Home Address:</label>
+                  <input name="Household Size" type="text"  class="form-control-input" id="Household Size" required>
+                  <label class="label-control" for="annual_inc"> Household Size:</label>
                   <div class="help-block with-errors"></div>
                 </div>
-								<div class="form-group">
-									<input name="mort_acc" type="text" class="form-control-input" id="mort_acc" required min="1" max="12">
-									<label class="label-control" for="mort_acc">Place of Work:</label>
-									<div class="help-block with-errors"></div>
-								</div>
                 <div class="form-group">
                   <input name="loan_amnt" class="form-control-input" type="number" min="500" max="40000" id="loan_amnt" required>
                   <label class="label-control" for="loan_amnt">Monthly Net Income:</label>
@@ -263,11 +227,7 @@
                   <label class="label-control" for="total_acc">Home Value:</label>
                   <div class="help-block with-errors"></div>
                 </div>
-                <div class="form-group">
-									<input name="total_acc" type="number" min="0"  class="form-control-input" id="total_acc" required>
-									<label class="label-control" for="total_acc">Longitude:</label>
-									<div class="help-block with-errors"></div>
-								</div>
+
 
 								</div>
 
@@ -415,57 +375,7 @@
     <!-- end of details 2 -->
 
     <!-- Footer -->
-    <div id="contact" class="footer">
-        <div class="container">
-            <div class="row">
-			<img class="card-image" src="{{url_for('static', filename='images/kunal.png')}}"  width="150" height="150" alt="alternative">
 
-                <div class="col-md-6">
-                    <div class="text-container about">
-                        <h4>Developed by:</h4>
-                        <h2 class="white">Kunal Goyal</h2>
-						<p class="white">Masters Student at National University of Ireland, Maynooth.</p>
-						<p class="white">Email: kunal.goyal.2020@mumail.ie </p>
-
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    <div class="text-container">
-                        <h4>Connect</h4>
-                        <ul class="list-unstyled li-space-lg white">
-                            <li>
-                                <a class="white" href="https://www.linkedin.com/in/kunal4g/">LinkedIn</a>
-                            </li>
-                            <li>
-                                <a class="white" href="https://github.com/ikunal95">Github</a>
-                            </li>
-                            <li>
-                                <a class="white" href="https://www.kaggle.com/ikunal4g">Kaggle</a>
-                            </li>
-                        </ul>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    <div class="text-container">
-                        <h4>Tools Used</h4>
-                        <ul class="list-unstyled li-space-lg">
-                            <li>
-                                <a class="white" href="https://www.ichec.ie/about/infrastructure/kay">ICHEC Kay</a>
-                            </li>
-                            <li>
-                               <a class="white" href="https://public.tableau.com/profile/kunal.goyal#!/vizhome/lendingclub_15949916461750/Dashboard1">Tableau</a>
-                            </li>
-                            <li class="media">
-                                <a class="white" href="https://www.lendingclub.com/info/statistics.action">Lending Club</a>
-                            </li>
-                        </ul>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->
-    <!-- end of footer -->
 
 
 
