@@ -42,25 +42,25 @@ def Individual():
     if flask.request.method =='POST':
 
 
-        Age = float(flask.request.form['code'])
-        Income = float(flask.request.form['fico_avg_score'])
-        CreditScore = float(flask.request.form['loan_amnt'])
-        HouseholdSize = float(flask.request.form['term'])
-        State = float(flask.request.form['dti'])
-        MedianHomeValue = float(flask.request.form['home_ownership'])
-        MedianHouseholdIncome = float(flask.request.form['mort_acc'])
-        Debt = float(flask.request.form['annual_inc'])
-        LoanTerm= float(flask.request.form['open_acc'])
-        InterestRate = float(flask.request.form['verification_status'])
-        CreditIncidents	 = float(flask.request.form['revol_util'])
-        HomeValue = float(flask.request.form['total_acc'])
-        LoanAmount = float(flask.request.form['er_credit_open_date'])
-        ProductType = float(flask.request.form['er_credit_open_date'])
+        Age = float(flask.request.form['Age'])
+        Income = float(flask.request.form['Monthly Net Income'])
+        CreditScore = float(flask.request.form['Credit Score'])
+        HouseholdSize = float(flask.request.form['Household Size'])
+        State = float(flask.request.form['State'])
+        MedianHomeValue = float(flask.request.form['Median Home Value'])
+        MedianHouseholdIncome = float(flask.request.form['Median Household Income'])
+        Debt = float(flask.request.form['Debt'])
+        LoanTerm= float(flask.request.form['term'])
+        InterestRate = float(flask.request.form['Interest Rate'])
+        CreditIncidents	 = float(flask.request.form['Credit Incidents'])
+        HomeValue = float(flask.request.form['Home Value'])
+        LoanAmount = float(flask.request.form['Loan Amount'])
+        ProductType = float(flask.request.form['Product Type'])
 
 
         temp = pd.DataFrame(index=[1])
-        temp['term']=term
-        temp['sub_grade']=sub_grade
+        temp['Age']=Age
+        temp['Income']=Income
         temp['home_ownership']=home_to_int[home_ownership.upper()]
         temp['annual_inc']=np.log(annual_inc)
         temp['verification_status']=verification_status
