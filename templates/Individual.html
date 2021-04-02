@@ -123,48 +123,48 @@
 								<form id="contactForm" data-toggle="validator" data-focus="false" action="{{ url_for('Individual') }}" method="POST">
                   <div class="form-group">
                     <input name="Name" type="text" class="form-control-input" id="Name" required min="1" max="99">
-                    <label class="label-control" for="code">Name:</label>
+                    <label class="label-control" for="Name">Name:</label>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
                     <input name="Age" type="number" class="form-control-input" id="Age" required min="1" max="99">
-                    <label class="label-control" for="code">Age:</label>
+                    <label class="label-control" for="Age">Age:</label>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
                     <input name="Phone Number" type="number" class="form-control-input" id="Phone Number" required min="1" max="99">
-                    <label class="label-control" for="code">Phone Number:</label>
+                    <label class="label-control" for="Phone Number">Phone Number:</label>
                     <div class="help-block with-errors"></div>
                   </div>
 								<div class="form-group">
-									<input name="er_credit_open_date" type="number" class="form-control-input" id="er_credit_open_date">
-									<label class="label-control" for="er_credit_open_date">Median Household Income:</label>
+									<input name="Median Household Income" type="number" class="form-control-input" id="Median Household Income">
+									<label class="label-control" for="Income">Median Household Income:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
-									<input name="code" type="number" class="form-control-input" id="code" required min="1" max="99">
-									<label class="label-control" for="code">Median Home Value:</label>
+									<input name="Median Home Value" type="number" class="form-control-input" id="Median Home Value" required min="1" max="99">
+									<label class="label-control" for="Median Home Value">Median Home Value:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
-									<input name="fico_avg_score" class="form-control-input" id="fico_avg_score" required>
-									<label class="label-control" for="fico_avg_score">Debt</label>
+									<input name="Debt" class="form-control-input" id="Debt" required>
+									<label class="label-control" for="Debt">Debt:</label>
 									<div class="help-block with-errors"></div>
 								</div>
                 <div class="form-group">
-                  <input name="total_acc" type="text"  class="form-control-input" id="total_acc" required>
-                  <label class="label-control" for="total_acc">Credit Incidents:</label>
+                  <input name="Credit Incidents" type="text"  class="form-control-input" id="Credit Incidents" required>
+                  <label class="label-control" for="Credit Incidents">Credit Incidents:</label>
                   <div class="help-block with-errors"></div>
                 </div>
 
 								<div class="form-group">
-									<input name="term" list="terms" class="form-control-input" type="number" min="36" max="60" id="term" required>
-									<label class="label-control" for="term">Loan Term (in Months)</label>
+									<input name="term" list="terms" class="form-control-input" type="number" min="36" max="60" id="Loan Term" required>
+									<label class="label-control" for="Loan Term">Loan Term (in Months):</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
-									<input name="dti" class="form-control-input" type="number" min="0" id="dti" required>
-									<label class="label-control" for="dti">Median Home Value:</label>
+									<input name="Product Type" class="form-control-input" type="text" min="0" id="Product Type" required>
+									<label class="label-control" for="Product Type">Product Type:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 
@@ -177,7 +177,7 @@
 							<!-- Contact Form -->
               <div class="form-group">
                 <input name="Gender" list="gender" class="form-control-input" required select>
-                <label class="label-control" for="home_ownership">Gender</label>
+                <label class="label-control" for="Gender">Gender</label>
                 <datalist id="gender">
                 <option value="Male">
                 <option value="Female">
@@ -188,43 +188,94 @@
               </div>
               <div class="form-group">
                 <input name="Birth-Date" type="date" class="form-control-input" id="Birth-Date" required min="1" max="99">
-                <label class="label-control" for="code">Birth Date:</label>
+                <label class="label-control" for="Birth Date">Birth Date:</label>
                 <div class="help-block with-errors"></div>
               </div>
               <div class="form-group">
-                <input name="State" list="gender" class="form-control-input" required select>
-                <label class="label-control" for="home_ownership">State:</label>
+                <input name="State" list="state" class="form-control-input" required select>
+                <label class="label-control" for="State">State:</label>
+                <datalist id="state">
+                  <select>
+  	<option value="AL">Alabama</option>
+  	<option value="AZ">Arizona</option>
+  	<option value="AR">Arkansas</option>
+  	<option value="CA">California</option>
+  	<option value="CO">Colorado</option>
+  	<option value="CT">Connecticut</option>
+  	<option value="FL">Florida</option>
+  	<option value="GA">Georgia</option>
+  	<option value="HI">Hawaii</option>
+  	<option value="ID">Idaho</option>
+  	<option value="IL">Illinois</option>
+  	<option value="IN">Indiana</option>
+  	<option value="IA">Iowa</option>
+  	<option value="KS">Kansas</option>
+  	<option value="KY">Kentucky</option>
+  	<option value="LA">Louisiana</option>
+  	<option value="ME">Maine</option>
+  	<option value="MD">Maryland</option>
+  	<option value="MA">Massachusetts</option>
+  	<option value="MI">Michigan</option>
+  	<option value="MN">Minnesota</option>
+  	<option value="MS">Mississippi</option>
+  	<option value="NE">Nebraska</option>
+  	<option value="NV">Nevada</option>
+  	<option value="NH">New Hampshire</option>
+  	<option value="NJ">New Jersey</option>
+  	<option value="NM">New Mexico</option>
+  	<option value="NY">New York</option>
+  	<option value="NC">North Carolina</option>
+  	<option value="OH">Ohio</option>
+  	<option value="OK">Oklahoma</option>
+  	<option value="OR">Oregon</option>
+  	<option value="PA">Pennsylvania</option>
+  	<option value="RI">Rhode Island</option>
+  	<option value="SC">South Carolina</option>
+  	<option value="TN">Tennessee</option>
+  	<option value="TX">Texas</option>
+  	<option value="UT">Utah</option>
+  	<option value="VT">Vermont</option>
+  	<option value="VA">Virginia</option>
+  	<option value="WA">Washington</option>
+  	<option value="WV">West Virginia</option>
+  	<option value="WI">Wisconsin</option>
+                </datalist>
                 <div class="help-block with-errors"></div>
               </div>
 
                 <div class="form-group">
 									<input name="Email" type="email"  class="form-control-input" id="Email" required>
-									<label class="label-control" for="annual_inc">Email ID:</label>
+									<label class="label-control" for="Email">Email ID:</label>
 									<div class="help-block with-errors"></div>
 								</div>
                 <div class="form-group">
-                  <input name="Household Size" type="text"  class="form-control-input" id="Household Size" required>
-                  <label class="label-control" for="annual_inc"> Household Size:</label>
+                  <input name="Household Size" type="number"  class="form-control-input" id="Household Size" required>
+                  <label class="label-control" for="Household Size"> Household Size:</label>
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                  <input name="loan_amnt" class="form-control-input" type="number" min="500" max="40000" id="loan_amnt" required>
-                  <label class="label-control" for="loan_amnt">Monthly Net Income:</label>
+                  <input name="Monthly Net Income" class="form-control-input" type="number" min="500" max="40000" id="Monthly Net Income" required>
+                  <label class="label-control" for="Monthly Net Income">Monthly Net Income:</label>
                   <div class="help-block with-errors"></div>
                 </div>
 								<div class="form-group">
-									<input name="open_acc" type="number" min="0"  class="form-control-input" id="open_acc" required>
-									<label class="label-control" for="open_acc">Credit Score :</label>
+									<input name="Credit Score" type="number" min="0"  class="form-control-input" id="Credit Score" required>
+									<label class="label-control" for="Credit Score">Credit Score:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
-									<input name="total_acc" type="number" min="0"  class="form-control-input" id="total_acc" required>
-									<label class="label-control" for="total_acc">Loan Amount:</label>
+									<input name="Loan Amount" type="number" min="0"  class="form-control-input" id="Loan Amount" required>
+									<label class="label-control" for="Loan Amount">Loan Amount:</label>
 									<div class="help-block with-errors"></div>
 								</div>
                 <div class="form-group">
-                  <input name="total_acc" type="number" min="0"  class="form-control-input" id="total_acc" required>
-                  <label class="label-control" for="total_acc">Home Value:</label>
+                  <input name="Home Value" type="number" min="0"  class="form-control-input" id="Home Value" required>
+                  <label class="label-control" for="Home Value">Home Value:</label>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <input name="Interest Rate" type="float" min="0"  class="form-control-input" id="Interest Rate" required>
+                  <label class="label-control" for="Interest Rate">Interest Rate:</label>
                   <div class="help-block with-errors"></div>
                 </div>
 
