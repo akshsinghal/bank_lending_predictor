@@ -61,7 +61,7 @@ def Individual():
         temp = pd.DataFrame(index=[1])
         temp['Age']=Age
         temp['Income']=Income
-        temp['home_ownership']=home_to_int[home_ownership.upper()]
+        temp['CreditScore']=home_to_int[home_ownership.upper()]
         temp['annual_inc']=np.log(annual_inc)
         temp['verification_status']=verification_status
         temp['dti']=dti
