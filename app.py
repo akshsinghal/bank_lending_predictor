@@ -20,7 +20,9 @@ df_macro_std = pd.read_csv('data/std.csv', index_col=0, dtype=np.float64)
 app = flask.Flask(__name__, template_folder='templates')
 @app.route('/')
 def main():
+    print("hello")
     return (flask.render_template('index.html'))
+
 
 @app.route('/report')
 def report():
@@ -116,8 +118,8 @@ def Individual():
 
         #create original output dict
         output_dict= dict()
-        #output_dict['Provided Annual Income'] = annual_inc
-        #output_dict['Provided FICO Score'] = fico_avg_score
+        output_dict['Provided Annual Income'] = Income
+        output_dict['Provided Credit Score'] = CreditScore
         #output_dict['Predicted Interest Rate'] = int_rate * 100 #revert back to percentage
         #output_dict['Estimated Installment Amount']=installment
         #output_dict['Number of Payments'] = 36 if term==1 else 60
@@ -129,18 +131,19 @@ def Individual():
         for feat in df_macro_mean.columns:
             scale[feat] = (scale[feat] - df_macro_mean[feat].values[0]) / df_macro_std[feat].values[0]
 
-        print("hello")
+
         #make prediction
         pred = clf_individual.predict(scale)
-        print(pred)
 
-        res = f'Congratulations! Approved! with probability {pred}'
-        print(res)
+        if pred==1:
+            res = f'Congratulations! Approved!'
+        else:
+            res = f'Sorry, we can\'t provide you with a loan'
 
 
 
         #render form again and add prediction
-        return flask.render_template('Individual', original_input=output_dict, result=res)
+        return flask.render_template('Individual.html', original_input=output_dict, result=res)
 
 
 
