@@ -41,46 +41,21 @@ def Individual():
 
     if flask.request.method =='POST':
 
-        #get input
 
-        #ask for first 2 digits of zip code as integer
-        code = int(flask.request.form['code'])
-        #fico score as integer
-        fico_avg_score = int(flask.request.form['fico_avg_score'])
-        #loan amount as integer
-        loan_amnt = float(flask.request.form['loan_amnt'])
-        #term as integer: 36 or 60
-        term = int(flask.request.form['term'])
-        #debt to income as float
-        dti = float(flask.request.form['dti'])
-        #home ownership as string
-        home_ownership = flask.request.form['home_ownership']
-        #number or mortgage accounts as integer
-        mort_acc = int(flask.request.form['mort_acc'])
-        #annual income as float
-        annual_inc = float(flask.request.form['annual_inc'])
-        #number of open accounts as integer
-        open_acc = int(flask.request.form['open_acc'])
-        #verification status as 0, 1, 2
-        verification_status = int(flask.request.form['verification_status'])
-        #revolving utilization as float
-        revol_util = float(flask.request.form['revol_util'])
-        #The total number of credit lines currently in the borrower's credit file
-        total_acc = int(flask.request.form['total_acc'])
-        #time since first credit line in months
-        er_credit_open_date = pd.to_datetime(flask.request.form['er_credit_open_date'])
-        issue_d = pd.to_datetime("today")
-        credit_hist = issue_d - er_credit_open_date
-        credit_line_ratio=open_acc/total_acc
-        balance_annual_inc=loan_amnt/annual_inc
-        #calculate grade from FICO
-        sub_grade = knn.predict(np.reshape([fico_avg_score], (1,-1)))[0]
-        #calculate grade
-        grade = round(sub_grade/5) + 1
-        #get interest rate
-        apr_row = df_fico_apr[df_fico_apr['grade_num']==sub_grade]
-
-
+        Age = float(flask.request.form['code'])
+        Income = float(flask.request.form['fico_avg_score'])
+        CreditScore = float(flask.request.form['loan_amnt'])
+        HouseholdSize = float(flask.request.form['term'])
+        State = float(flask.request.form['dti'])
+        MedianHomeValue = float(flask.request.form['home_ownership'])
+        MedianHouseholdIncome = float(flask.request.form['mort_acc'])
+        Debt = float(flask.request.form['annual_inc'])
+        LoanTerm= float(flask.request.form['open_acc'])
+        InterestRate = float(flask.request.form['verification_status'])
+        CreditIncidents	 = float(flask.request.form['revol_util'])
+        HomeValue = float(flask.request.form['total_acc'])
+        LoanAmount = float(flask.request.form['er_credit_open_date'])
+        ProductType = float(flask.request.form['er_credit_open_date'])
 
 
         temp = pd.DataFrame(index=[1])
