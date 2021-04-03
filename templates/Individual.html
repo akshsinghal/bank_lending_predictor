@@ -293,19 +293,24 @@
             </div> 	<!-- end of text-container -->
               <button type="submit" class="form-control-submit-button">MAKE PREDICTION</button>
             </form>
-            !-- end of container -->
+            <!-- end of container -->
             <div class="result" align="center">
-          
+              <br>
+              <br>
+
             {% if result %}
+        <img src='../static/images/out.jpg' alt="">
+            <br>
+            {{exp|safe}}
             <br> Loan Decision:
             <p style="font-size:20px">{{ result }}</p>
             {% endif %}
             </div>
             </div>
             </div>
-            </div> <!-- end
+          </div> <!-- end-->
     <!-- end of terms content -->
- 	  <!-- Details 2 -->
+ 	  <!-- Details 2 -->--
 	<div id="Insights" class="tabs">
             <div class="row">
 
