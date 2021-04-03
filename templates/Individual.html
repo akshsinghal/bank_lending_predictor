@@ -122,7 +122,7 @@
 							<!-- Contact Form -->
 								<form id="contactForm" data-toggle="validator" data-focus="false" action="{{ url_for('Individual') }}" method="POST">
                   <div class="form-group">
-                    <input name="Name" type="text" class="form-control-input" id="Name" required min="1" max="99">
+                    <input name="Name" type="text" class="form-control-input" id="Name" >
                     <label class="label-control" for="Name">Name:</label>
                     <div class="help-block with-errors"></div>
                   </div>
@@ -132,7 +132,7 @@
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group">
-                    <input name="Phone Number" type="number" class="form-control-input" id="Phone Number" required min="1" max="99">
+                    <input name="Phone Number" type="number" class="form-control-input" id="Phone Number">
                     <label class="label-control" for="Phone Number">Phone Number:</label>
                     <div class="help-block with-errors"></div>
                   </div>
@@ -142,37 +142,43 @@
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
-									<input name="Median Home Value" type="number" class="form-control-input" id="Median Home Value" required min="1" max="99">
+									<input name="Median Home Value" type="number" class="form-control-input" id="Median Home Value" required >
 									<label class="label-control" for="Median Home Value">Median Home Value:</label>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="form-group">
-									<input name="Debt" class="form-control-input" id="Debt" required>
+									<input name="Debt" class="form-control-input" id="Debt" type = "number" required>
 									<label class="label-control" for="Debt">Debt:</label>
 									<div class="help-block with-errors"></div>
 								</div>
                 <div class="form-group">
-                  <input name="Credit Incidents" type="text"  class="form-control-input" id="Credit Incidents" required>
+                  <input name="Credit Incidents" type="number"  class="form-control-input" id="Credit Incidents" required>
                   <label class="label-control" for="Credit Incidents">Credit Incidents:</label>
                   <div class="help-block with-errors"></div>
                 </div>
 
 								<div class="form-group">
-									<input name="term" list="terms" class="form-control-input" type="number" min="36" max="60" id="Loan Term" required>
-									<label class="label-control" for="Loan Term">Loan Term (in Months):</label>
+									<input name="term" list="terms" class="form-control-input" type="number"  id="Loan Term" required>
+									<label class="label-control" for="Loan Term">Loan Term:</label>
 									<div class="help-block with-errors"></div>
 								</div>
-								<div class="form-group">
-									<input name="Product Type" class="form-control-input" type="text" min="0" id="Product Type" required>
-									<label class="label-control" for="Product Type">Product Type:</label>
-									<div class="help-block with-errors"></div>
-								</div>
-
-
-
+                <div class="form-group">
+                  <input name="Product Type" list="products" class="form-control-input" required select>
+                  <label class="label-control" for="Product Type">Product Type:</label>
+                  <datalist id="products">
+                    <select>
+    	<option value="Adjustable_rate">Adjustable_rate</option>
+    	<option value="Fixed_rate">Fixed_rate</option>
+    	<option value="Government_insured">Government_insured</option>
+    	<option value="Jumbo">Jumbo</option>
+    </select>
+                  </datalist>
+                  <div class="help-block with-errors"></div>
+                </div>
                     </div> <!-- end of contact form -->
                 </div> 	<!-- end of text-container -->
-				                <div class="col-lg-6">
+
+                        <div class="col-lg-6">
                     <div class="text-container">
 							<!-- Contact Form -->
               <div class="form-group">
@@ -274,7 +280,7 @@
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                  <input name="Interest Rate" type="float" min="0"  class="form-control-input" id="Interest Rate" required>
+                  <input name="Interest Rate" type="number" min="0"  class="form-control-input" id="Interest Rate" required>
                   <label class="label-control" for="Interest Rate">Interest Rate:</label>
                   <div class="help-block with-errors"></div>
                 </div>
@@ -283,24 +289,21 @@
 								</div>
 
 
-
-                    </div> <!-- end of contact form -->
-					</div> 	<!-- end of text-container -->
-                    <button type="submit" class="form-control-submit-button">MAKE PREDICTION</button>
-					</form>
-					</div> <!-- end of container -->
-				<div class="result" align="center">
-						{% if result %}
-						{% for variable, value in original_input.items() %}
-						<br><b>{{ variable }}</b> : {{ value }}
-						{% endfor %}
-						<br>
-						<br> Loan Decision:
-						<p style="font-size:20px">{{ result }}</p>
-						{% endif %}
-				</div>
-		</div>
-    </div> <!-- end of ex-basic -->
+              </div> <!-- end of contact form -->
+            </div> 	<!-- end of text-container -->
+              <button type="submit" class="form-control-submit-button">MAKE PREDICTION</button>
+            </form>
+            !-- end of container -->
+            <div class="result" align="center">
+          
+            {% if result %}
+            <br> Loan Decision:
+            <p style="font-size:20px">{{ result }}</p>
+            {% endif %}
+            </div>
+            </div>
+            </div>
+            </div> <!-- end
     <!-- end of terms content -->
  	  <!-- Details 2 -->
 	<div id="Insights" class="tabs">
