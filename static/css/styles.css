@@ -51,7 +51,7 @@ html {
     width: 100%;
 	height: 100%;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
 body, p {
 	color: #787976;
 	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
