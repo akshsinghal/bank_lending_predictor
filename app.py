@@ -2,19 +2,12 @@ import flask
 import pickle
 import pandas as pd
 import numpy as np
-import imgkit
 import sklearn
 from sklearn.preprocessing import StandardScaler
 import sys
-import lime
-from lime import lime_tabular
-import dill
-from PIL import Image
-import PIL
-
 
 #load models at top of app to load into memory only one time
-with open('models/model.pickle', 'rb') as f:
+with open('models/rf.pickle', 'rb') as f:
     clf_individual = pickle.load(f)
 
 ss = StandardScaler()
@@ -46,7 +39,7 @@ def Individual():
     if flask.request.method =='POST':
 
 
-        Age = float(flask.request.form['Age'])
+        Age = flask.request.form['Age']
         print(Age)
 
         Income = float(flask.request.form['Monthly Net Income'])
@@ -125,8 +118,8 @@ def Individual():
 
         #create original output dict
         output_dict= dict()
-    #    output_dict['Provided Annual Income'] = Income
-    #    output_dict['Provided Credit Score'] = CreditScore
+        output_dict['Provided Annual Income'] = Income
+        output_dict['Provided Credit Score'] = CreditScore
         #output_dict['Predicted Interest Rate'] = int_rate * 100 #revert back to percentage
         #output_dict['Estimated Installment Amount']=installment
         #output_dict['Number of Payments'] = 36 if term==1 else 60
@@ -136,36 +129,21 @@ def Individual():
         #create deep copy
         scale = temp.copy()
         for feat in df_macro_mean.columns:
-            scale[feat] = float(scale[feat] - df_macro_mean[feat].values[0]) / df_macro_std[feat].values[0]
+            scale[feat] = (scale[feat] - df_macro_mean[feat].values[0]) / df_macro_std[feat].values[0]
 
 
         #make prediction
         pred = clf_individual.predict(scale)
 
-
-        with open('./data/data_explainer', 'rb') as f:
-            explainer= dill.load(f)
-
-            exp = explainer.explain_instance(
-            data_row= scale.iloc[0],
-            predict_fn=clf_individual.predict_proba
-            )
-
-            exp = exp.as_html()
-
-
-
-
-
         if pred==1:
-            res = f'Congratulations! Your Loan has high chances of being Approved!'
+            res = f'Congratulations! Approved!'
         else:
             res = f'Sorry, we can\'t provide you with a loan'
 
 
 
         #render form again and add prediction
-        return flask.render_template('Individual.html', exp =exp, result=res)
+        return flask.render_template('Individual.html', original_input=output_dict, result=res)
 
 
 
