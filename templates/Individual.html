@@ -282,8 +282,7 @@
                 <div class="form-group">
                   <input name="Interest Rate" type="number" min="0"  class="form-control-input" id="Interest Rate" required>
                   <label class="label-control" for="Interest Rate">Interest Rate:</label>
-                  <div class="help-block with-errors"></div>
-                </div>
+                  <div class="help-block with-errors"></div> </div>
 
 
 								</div>
@@ -324,9 +323,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i>ROC AUC</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-th"></i>Precision Recall</a>
-                    </li>
 
                 </ul>
                 <!-- end of tabs links -->
@@ -337,12 +333,12 @@
                     <!-- Tab -->
                     <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
                         <h4>ROC AUC Score</h4>
-                        <p>The following graph shows the ROC AUC Curve for different Machine Learning Models. XGBoost gives the best AUC.</p>
+                        <p>The following graph shows the ROC AUC Curve for different Machine Learning Models. RandomForest gives the best AUC.</p>
 
                         <!-- Progress Bars -->
-                         <div class="col-lg-5 col-xl-6">
+                         <div class="col-lg-4 col-xl-4">
                     <div class="image-container">
-                        <img class="card-image" src="{{url_for('static', filename='images/roc_curve_all_models.png')}}" alt="alternative">
+                        <img class="card-image" src="{{url_for('static', filename='images/img1.jpg')}}"  width="400" height= "400" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                         <!-- end of progress bars -->
@@ -351,17 +347,7 @@
                     <!-- end of tab -->
 
                     <!-- Tab -->
-                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
-                        <h4>Precission Recall Score </h4>
-                        <p>The following graph shows the Precision Recall Curve for different Machine Learning Models. </p>
 
-                       <div class="col-lg-5 col-xl-6">
-                    <div class="image-container">
-                        <img class="card-image" src="{{url_for('static', filename='images/prc_curve_all_models.png')}}" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                    </div> <!-- end of tab-pane -->
-                    <!-- end of tab -->
 
                     <!-- Tab -->
 
@@ -377,30 +363,28 @@
 
             <div class="tabs-container">
 
-                <!-- Tabs Links -->
-                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="true"><i class="fas fa-th"></i>Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false"><i class="fas fa-th"></i>Confidence Interval</a>
-                    </li>
+              <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i>Feature Weights</a>
+                  </li>
 
-                </ul>
-                <!-- end of tabs links -->
+              </ul>
+              <!-- end o
 
                 <!-- Tabs Content -->
                 <div class="tab-content" id="ariaTabsContent">
 
                     <!-- Tab -->
                     <div class="tab-pane fade show active" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-                        <h4>XGBoost Feature Weights</h4>
+                        <h4>Random Forest Feature Weights</h4>
                         <p>The following graph gives the feature importance to predict the Loan Defaults.</p>
-
+                        <br/>
+                          <br/>
+                            <br/>
                         <!-- Progress Bars -->
                          <div class="col-lg-5 col-xl-6">
                     <div class="image-container">
-                        <img class="card-image" src="{{url_for('static', filename='images/features_weight.PNG')}}" alt="alternative">
+                        <img class="card-image" src="{{url_for('static', filename='images/img2.jpeg')}}" width="450" height= "350" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                         <!-- end of progress bars -->
@@ -409,17 +393,6 @@
                     <!-- end of tab -->
 
                     <!-- Tab -->
-                    <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
-                        <h4>XGBoost Confidence Interval</h4>
-                        <p>As we can see from the graph testing the model on random selection of subset of the lending data, AUC score everytime was around 0.71.</p>
-
-                       <div class="col-lg-5 col-xl-6">
-                    <div class="image-container">
-                        <img class="card-image" src="{{url_for('static', filename='images/threshold_Individual.png')}}" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                    </div> <!-- end of tab-pane -->
-                    <!-- end of tab -->
 
                     <!-- Tab -->
 
