@@ -54,15 +54,15 @@ html {
 
 body, p {
 	color: #787976;
-	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+	font: 400 1rem/1.5625rem "Menlo", monospace;
 }
 
 .p-large {
-	font: 400 1.125rem/1.625rem "Open Sans", sans-serif;
+	font: 400 1.125rem/1.625rem "Menlo", monospace;
 }
 
 .p-small {
-	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
+	font: 400 0.875rem/1.375rem "Menlo", monospace;
 }
 
 .p-heading {
@@ -80,32 +80,32 @@ body, p {
 
 h1 {
 	color: #484a46;
-	font: 700 2.5rem/3rem "Montserrat", sans-serif;
+	font: 700 2.5rem/3rem "Menlo", monospace;
 }
 
 h2 {
 	color: #484a46;
-	font: 700 1.75rem/2.125rem "Montserrat", sans-serif;
+	font: 700 1.75rem/2.125rem "Menlo", monospace;
 }
 
 h3 {
 	color: #484a46;
-	font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
+	font: 700 1.375rem/1.75rem "Menlo", monospace;
 }
 
 h4 {
 	color: #484a46;
-	font: 700 1.25rem/1.625rem "Montserrat", sans-serif;
+	font: 700 1.25rem/1.625rem "Menlo", monospace;
 }
 
 h5 {
 	color: #484a46;
-	font: 700 1.125rem/1.5rem "Montserrat", sans-serif;
+	font: 700 1.125rem/1.5rem "Menlo", monospace;
 }
 
 h6 {
 	color: #484a46;
-	font: 700 1rem/1.375rem "Montserrat", sans-serif;
+	font: 700 1rem/1.375rem "Menlo", monospace;
 }
 
 a {
@@ -132,7 +132,7 @@ a.white,
 }
 
 .testimonial-author {
-	font: 700 1rem/1.375rem "Montserrat", sans-serif;
+	font: 700 1rem/1.375rem "Menlo", monospace;
 }
 
 strong {
@@ -141,7 +141,7 @@ strong {
 
 .section-title {
 	color:#a79e84;
-	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
+	font: 500 0.8125rem/1.125rem "Menlo", monospace;
 }
 
 .btn-solid-reg {
@@ -151,7 +151,7 @@ strong {
 	border-radius: 0.25rem;
 	background-color:#a79e84;
 	color: #fff;
-	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	font: 700 0.75rem/0 "Menlo", monospace;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -169,7 +169,7 @@ strong {
 	border-radius: 0.25rem;
 	background-color:#a79e84;
 	color: #fff;
-	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	font: 700 0.75rem/0 "Menlo", monospace;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -187,7 +187,7 @@ strong {
 	border-radius: 0.25rem;
 	background-color: transparent;
 	color: #787976;
-	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	font: 700 0.75rem/0 "Menlo", monospace;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -205,7 +205,7 @@ strong {
 	border-radius: 0.25rem;
 	background-color: transparent;
 	color: #787976;
-	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	font: 700 0.75rem/0 "Menlo", monospace;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -223,7 +223,7 @@ strong {
 	border-radius: 0.25rem;
 	background-color: transparent;
 	color: #787976;
-	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	font: 700 0.75rem/0 "Menlo", monospace;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -253,7 +253,7 @@ strong {
 	left: 1.375rem;
 	color: #787976;
 	opacity: 1;
-	font: 350 0.700rem/1.375rem "Open Sans", sans-serif;
+	font: 350 0.700rem/1.375rem "Menlo", monospace;
 	cursor: text;
 	transition: all 0.2s ease;
 }
@@ -286,7 +286,7 @@ strong {
 	border-radius: 0.15rem;
 	background-color: #fff;
 	color: #787976;
-	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
+	font: 400 0.875rem/1.375rem "Menlo", monospace;
 	transition: all 0.2s;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
@@ -340,7 +340,7 @@ select::-ms-expand {
 	border-radius: 0.25rem;
 	background-color: #fff;
 	color: #787976;
-	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+	font: 400 1rem/1.5625rem "Menlo", monospace;
 	transition: all 0.2s;
 }
 
@@ -358,7 +358,7 @@ select::-ms-expand {
 }
 
 .checkbox {
-	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
+	font: 400 0.875rem/1.375rem "Menlo", monospace;
 }
 
 input[type='checkbox'] {
@@ -381,7 +381,7 @@ input[type='checkbox'] {
 	border-radius: 0.25rem;
 	background-color:#a79e84;
 	color: #fff;
-	font: 700 0.75rem/1.75rem "Montserrat", sans-serif;
+	font: 700 0.75rem/1.75rem "Menlo", monospace;
 	cursor: pointer;
 	transition: all 0.2s;
 	text-align:center;
@@ -404,7 +404,7 @@ input[type='checkbox'] {
 	display: block;
 	margin-bottom: 0;
 	color: #b93636;
-	font: 400 1.125rem/1rem "Open Sans", sans-serif;
+	font: 400 1.125rem/1rem "Menlo", monospace;
 }
 
 .help-block.with-errors .list-unstyled {
@@ -647,9 +647,9 @@ input[type='checkbox'] {
 .navbar-custom {
 	padding-top: 0.375rem;
 	padding-bottom: 0.375rem;
-	background-color: #113448;
+	background-color: #fff;
 	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-	font: 600 0.875rem/0.875rem "Open Sans", sans-serif;
+	font: 600 0.875rem/0.875rem "Menlo", monospace;
 	transition: all 0.2s;
 }
 
@@ -666,7 +666,7 @@ input[type='checkbox'] {
 .navbar-custom .navbar-brand.logo-text {
 	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
-	font: 700 2.25rem/1.5rem "Montserrat", sans-serif;
+	font: 700 2.25rem/1.5rem "Menlo", monospace;
 	color: #fff;
 	text-decoration: none;
 }
@@ -685,7 +685,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
-	color:#a79e84;
+	color:#fff;
 }
 
 /* Dropdown Menu */
@@ -713,7 +713,7 @@ input[type='checkbox'] {
 	margin-top: 0;
 	border: none;
 	border-radius: 0.25rem;
-	background-color: #113448;
+	background-color: #fff;
 }
 
 .navbar-custom .dropdown-item {
@@ -722,15 +722,15 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover {
-	background-color: #113448;
+	background-color: #fff;
 }
 
 .navbar-custom .dropdown-item .item-text {
-	font: 600 0.875rem/0.875rem "Open Sans", sans-serif;
+	font: 600 0.875rem/0.875rem "Menlo", monospace;
 }
 
 .navbar-custom .dropdown-item:hover .item-text {
-	color:#a79e84;
+	color:#fff;
 }
 
 .navbar-custom .dropdown-items-divide-hr {
@@ -738,7 +738,7 @@ input[type='checkbox'] {
 	height: 1px;
 	margin: 0.75rem auto 0.75rem auto;
 	border: none;
-	background-color: #b5bcc4;
+	background-color: #fff;
 	opacity: 0.2;
 }
 /* end of dropdown menu */
@@ -775,7 +775,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/love.jpg') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/ne.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -956,7 +956,7 @@ input[type='checkbox'] {
 .cards-2 .price {
 	margin-bottom: 0.25rem;
 	color: #484a46;
-	font: 700 1rem/1.5rem "Montserrat", sans-serif;
+	font: 700 1rem/1.5rem "Menlo", monospace;
 	text-align: center;
 }
 
@@ -1013,7 +1013,7 @@ input[type='checkbox'] {
 	border-radius: 50%;
 	background-color:#a79e84;
 	color: #fff;
-	font: 700 1rem/2.125rem "Montserrat", sans-serif;
+	font: 700 1rem/2.125rem "Menlo", monospace;
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
@@ -1037,7 +1037,7 @@ input[type='checkbox'] {
 	margin-top: 0.125rem;
 	margin-bottom: 0.25rem;
 	color: #484a46;
-	font: 700 1.25rem/1.75rem "Montserrat", sans-serif;
+	font: 700 1.25rem/1.75rem "Menlo", monospace;
 	vertical-align: middle;
 	cursor: pointer;
 	transition: all 0.2s ease;
@@ -1080,7 +1080,7 @@ input[type='checkbox'] {
 	border: none;
 	border-radius: 0.25rem;
 	color: #c1cace;
-	font: 700 1.375rem/1.375rem "Montserrat", sans-serif;
+	font: 700 1.375rem/1.375rem "Menlo", monospace;
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -1103,7 +1103,7 @@ input[type='checkbox'] {
 .tabs #tab-1 .progress-container .title {
 	margin-bottom: 0.25rem;
 	color: #484a46;
-	font: 600 0.875rem/1.25rem "Open Sans", sans-serif;
+	font: 600 0.875rem/1.25rem "Menlo", monospace;
 }
 
 .tabs #tab-1 .progress {
@@ -1346,7 +1346,7 @@ input[type='checkbox'] {
 	border-radius: 0.25rem;
 	background-color: #f1f4f7;
 	color: #7b7e85;
-	font: 700 0.75rem/1.25rem "Montserrat", sans-serif;
+	font: 700 0.75rem/1.25rem "Menlo", monospace;
 	cursor: pointer;
 	transition: all 0.2s ease;
 }
@@ -1408,7 +1408,7 @@ input[type='checkbox'] {
 	right: 0;
 	left: 0;
 	color: #fff;
-	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
+	font: 700 1.125rem/1.625rem "Menlo", monospace;
 }
 
 
@@ -1537,7 +1537,7 @@ input[type='checkbox'] {
 .basic-2 .team-member .job-title {
 	margin-bottom: 0.75rem;
 	color: #484a46;
-	font: 700 1rem/1.375rem "Montserrat", sans-serif;
+	font: 700 1rem/1.375rem "Menlo", monospace;
 }
 
 .basic-2 .fa-stack {
@@ -1626,7 +1626,7 @@ input[type='checkbox'] {
 	display: inline-block;
 	margin-bottom: 0.125rem;
 	color:#a79e84;
-	font: 700 2.875rem/3.25rem "Montserrat", sans-serif;
+	font: 700 2.875rem/3.25rem "Menlo", monospace;
 	vertical-align: middle;
 }
 
@@ -1879,13 +1879,13 @@ a:hover.back-to-top {
 
 	.navbar-custom .nav-item .nav-link:hover,
 	.navbar-custom .nav-item .nav-link.active {
-		color:#454140;
+		color:#fff;
 	}
 
 	.navbar-custom.top-nav-collapse {
         padding: 0.375rem 1.5rem 0.375rem 2rem;
 		box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-		background-color: #113448;
+		background-color: #fff;
 	}
 
 	.navbar-custom.top-nav-collapse .navbar-brand.logo-text {
@@ -1898,7 +1898,7 @@ a:hover.back-to-top {
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color:#454140;
+		color:#fff;
 	}
 
 	.navbar-custom .dropdown-menu {
@@ -1931,7 +1931,7 @@ a:hover.back-to-top {
 	}
 
 	.header h1 {
-		font: 700 3.5rem/4rem "Montserrat", sans-serif;
+		font: 700 3.5rem/4rem "Menlo", monospace;
 	}
 	/* end of header */
 
